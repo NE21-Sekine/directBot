@@ -24,7 +24,7 @@ const onfile = (res, file) => {
         let imageBytes = fs.readFileSync('images/'+file.name, { encoding: "base64" });
         stub.PostModelOutputs(
           {
-            model_id: "marmals-model",
+            model_id: "mammals-model",
             inputs: [{ data: { image: { base64: imageBytes } } }]
           },
           metadata,
